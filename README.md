@@ -15,3 +15,5 @@ http://www.numerate.com/numerates-ranking-technology-pharmaceutical-rd-gains-u-s
 4. $ipython notebook
 5. it should open up the webbrowser, then open .ipynb file
 ```
+
+https://storage.googleapis.com/supplemental_media/udacityu/5428018709/nyc_subway_weather.csv
