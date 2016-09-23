@@ -61,7 +61,35 @@ def mean_riders_for_max_station(ridership):
     This is the same as a previous exercise, but this time the
     input is a Pandas DataFrame rather than a 2D NumPy array.
     '''
-    overall_mean = None # Replace this with your code
-    mean_for_max = None # Replace this with your code
+    overall_mean = ridership.values.mean() # Replace this with your code
+    index = ridership.iloc[0].argmax()
+    mean_for_max =  ridership[index].values.mean()# Replace this with your code
     
     return (overall_mean, mean_for_max)
+import pandas as pd
+
+filename = '/datasets/ud170/subway/nyc_subway_weather.csv'
+subway_df = pd.read_csv(filename)
+
+def correlation(x, y):
+    '''
+    Fill in this function to compute the correlation between the two
+    input variables. Each input is either a NumPy array or a Pandas
+    Series.
+    
+    correlation = average of (x in standard units) times (y in standard units)
+    
+    Remember to pass the argument "ddof=0" to the Pandas std() function!
+    '''
+    return None
+
+entries = subway_df['ENTRIESn_hourly']
+cum_entries = subway_df['ENTRIESn']
+rain = subway_df['meanprecipi']
+temp = subway_df['meantempi']
+
+print correlation(entries, rain)
+print correlation(entries, temp)
+print correlation(rain, temp)
+
+print correlation(entries, cum_entries)
