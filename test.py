@@ -51,8 +51,7 @@ if False:
     print df.sum()
     print df.sum(axis=1)
     print df.values.sum()
-<<<<<<< HEAD
-=======
+
     
 def mean_riders_for_max_station(ridership):
     '''
