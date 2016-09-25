@@ -10,16 +10,16 @@ width, height, my_id = [int(i) for i in raw_input().split()]
 while True:
     for i in xrange(height):
         row = raw_input()
-        print row
+        print >> sys.stderr, row
     entities = int(raw_input())
     for i in xrange(entities):
         entity_type, owner, x, y, param_1, param_2 = [int(j) for j in raw_input().split()]
-        print entity_type
-        print owner
-        print x
-        print y
-        print param_1
-        print param_2
+        print >> sys.stderr, "entity_type ", entity_type
+        print >> sys.stderr, "owner ", owner
+        print >> sys.stderr, "x ", x
+        print >> sys.stderr, "y ", y
+        print >> sys.stderr, "param_1 ", param_1
+        print >> sys.stderr, "param_2 ", param_2
 
     # Write an action using print
     # To debug: print >> sys.stderr, "Debug messages..."
