@@ -5,11 +5,10 @@ import numpy as np
 # the standard input according to the problem statement.
 
 width, height, my_id = [int(i) for i in raw_input().split()]
-def danger(x, y):
 
 # game loop
 while True:
-    dangeon = np.empty([11, 13], dtype=int)
+    dangeon = np.chararray((11, 13))
     for i in xrange(height):
         row = raw_input()
         dangeon[i, :] = row
