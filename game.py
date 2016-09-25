@@ -26,14 +26,14 @@ while True:
     for i in xrange(entities):
         entity_type, owner, x, y, param_1, param_2 = [int(j) for j in raw_input().split()]
         pieces[i, :] = (entity_type, owner, x, y, param_1, param_2)
-        print >> sys.stderr, "entity_type ", entity_type
-        print >> sys.stderr, "owner ", owner
-        print >> sys.stderr, "x ", x
-        print >> sys.stderr, "y ", y
-        print >> sys.stderr, "param_1 ", param_1
-        print >> sys.stderr, "param_2 ", param_2
-
+        # print >> sys.stderr, "entity_type ", entity_type
+        # print >> sys.stderr, "owner ", owner
+        # print >> sys.stderr, "x ", x
+        # print >> sys.stderr, "y ", y
+        # print >> sys.stderr, "param_1 ", param_1
+        # print >> sys.stderr, "param_2 ", param_2
+    ex, ey = loc_of_enemy(pieces)
     # Write an action using print
     # To debug: print >> sys.stderr, "Debug messages..."
-
+    print "BOMB ", ex, " ", ey
     print "BOMB 6 5"
