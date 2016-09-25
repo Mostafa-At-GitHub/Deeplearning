@@ -7,10 +7,8 @@ import numpy as np
 width, height, my_id = [int(i) for i in raw_input().split()]
 def loc_of_enemy(arr):
     des = arr.shape[0]
-    print des
     for x in xrange(0, arr.shape[0]):
         if arr[x,0] == 0 and arr[x, 1] == 1:
-            print arr[x, :]
             return (arr[x,2], arr[x,3])
     return (0, 0)
 
@@ -33,7 +31,7 @@ while True:
         # print >> sys.stderr, "param_1 ", param_1
         # print >> sys.stderr, "param_2 ", param_2
     ex, ey = loc_of_enemy(pieces)
+    print >> sys.stderr, ex, ey
     # Write an action using print
     # To debug: print >> sys.stderr, "Debug messages..."
     print "BOMB ", ex, " ", ey
-    print "BOMB 6 5"
