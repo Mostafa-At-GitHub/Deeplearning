@@ -5,6 +5,14 @@ import numpy as np
 # the standard input according to the problem statement.
 
 width, height, my_id = [int(i) for i in raw_input().split()]
+def loc_of_enemy(arr):
+    des = arr.shape[0]
+    print des
+    for x in xrange(0, arr.shape[0]):
+        if arr[x,0] == 0 and arr[x, 1] == 1:
+            print arr[x, :]
+            return (arr[x,2], arr[x,3])
+    return (0, 0)
 
 # game loop
 while True:
