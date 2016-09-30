@@ -9,3 +9,10 @@ def loc_of_enemy(arr):
     return (0, 0)
 a = np.empty([2, 4], dtype=int)
 loc_of_enemy(a)
+
+def estimate_ene_loc(prev, curr):
+    diff = np.subtract(curr, prev)
+    return np.add(curr, diff)
+prev = (1, 1)
+curr = (3, 3)
+print estimate_ene_loc(prev, curr)
